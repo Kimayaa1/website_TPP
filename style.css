@@ -418,6 +418,9 @@ ul {
     .content {
         flex-direction: column;
     }
+    .content img{
+        width: fit-content;
+    }
     .popup-content p{
         font-size: x-small;
     }
