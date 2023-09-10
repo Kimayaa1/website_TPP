@@ -1,77 +1,494 @@
+
 * {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header {
-    height: 640px;
-    width: auto;
-    background-image: url("hero_image.jpg");
-    background-size: cover; 
-}
-
-.navigation-bar {
-    height: 100px;
-    width: auto;
-    /* background-color: blue; */
-    display: flex; 
-}
-
-.navigation-bar img{
-    border-radius: 50%;
-    margin-left: 2rem;
-    margin-top: 1rem;
-}
-
-.buttons{
-    /* justify-content: right; */
-    /* align-items: center; */
-    margin-top: 2rem;
-    color: white;
+.navbar {
     position: absolute;
-    right: -20px;
-}
-.buttons ul{
-    list-style-type: none;
-    display: flex;
-    /* justify-content: left;
-    align-items: center; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; 
 }
 
-.buttons li{
-    margin-right: 2rem;
-    color: black;
+/* Update the logo's margin */
+.logo {
+    height: 60px; 
+    margin-right: 0; 
+    border-radius: 50%;
 }
 
-.buttons li:hover{
-    text-decoration: underline;
+
+.navbar-nav .nav-link {
+    color: #ef9b0f; /* Text color for links */
+    font-weight: bold; /* Font weight for links */
+    padding: 0.5rem 1rem 0.5rem 0.5rem; /* Add this line for spacing */
+    transition: color 0.3s; /* Smooth color transition on hover */
 }
 
-.short-intro{
-    /* margin-right: 2rem; */
-    text-align: right;
+/* Navbar Links Hover Styles */
+.navbar-nav .nav-link:hover {
+    color: #ff6600; /* Change color on hover */
+}
+
+.navbar-toggler-icon {
+    /* background-color: #333; Remove this line */
+    background-color: transparent; /* Add this line */
+}
+
+
+#headerCarousel {
+    height: auto; /* Adjust the height as needed */
     position: relative;
-    left: 400px;
-    top: 400px;
-    width: 65%;
-}
-.short-intro h2{
-    -webkit-text-stroke: 0.1px transparent;
-    color: transparent;
-    background-image: linear-gradient(black, black);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -750px 0;
-    animation: backcolor 3s linear infinite alternate;
+  }
+  
+  /* Style the carousel indicators (optional) */
+  .carousel-indicators {
+    bottom: 10px;
+  }
+  
+  .carousel-indicators li {
+    display: none;
+  } 
+  
+  
+  /* Style the slides */
+  .carousel-inner img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+  }
+  
+.search-container {
+    position: absolute;
+    top: 50%; /* Vertically center the search bar */
+    left: 50%; /* Horizontally center the search bar */
+    width: 80%;
+    transform: translate(-50%, -50%); 
+    padding: 20px;
+    display: flex;
 }
 
-@keyframes backcolor{
-    100%{
-        background-position: 0 0;
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: white;
+    /* color: white; */
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    cursor: pointer;
+}
+.search-icon {
+    font-size: 24px; 
+    margin-right: 8px; 
+}
+.search-container button:active {
+    background-color: #bebebe; /* Change the background color when clicked */
+}
+
+.flicker-text {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: flicker 1s infinite alternate; /* Adjust duration as needed */
+    background-color: #ff1b6e;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Keyframes for the flicker animation */
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }
-.short-intro p{
-    /* width: 65%; */
-    margin-top: 0.5rem;
-    color: #252525;
+.intro-and-image {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
 }
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50%; /* Adjust the size as needed */
+    z-index: 3; /* Ensure it's above both the slideshow and text */
+}
+/* Style the introductory box */
+.intro-box {
+    /* width: 70%; */
+    max-width: auto;
+    float: left;
+    text-align: right;
+    margin-right: 20px; 
+    margin-left: 20px;
+}
+
+/* Style the introductory text */
+.intro-box p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style for the button */
+.intro-button {
+    background-color: #ff1b6e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.intro-button:hover {
+    background-color: #075935;
+}
+
+/* Custom CSS to control image size */
+.carousel-image {
+    max-width: 100%; /* Set the maximum width you prefer */
+    max-height: auto; /* Set the maximum height you prefer */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  /* Style for the image */
+#overlap-image {
+    position: absolute;
+    z-index: 999; /* Set a high z-index value to place it above the carousel */
+    top: 0; /* Position the image at the top of the carousel */
+    left: 0; /* Position the image at the left edge of the carousel */
+    width: 100%; /* Make the image cover the entire width of the carousel */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  
+  /* Style for the container holding the carousel and the image */
+  .container {
+    position: relative; /* Ensure the container acts as the positioning reference for the absolute image */
+    overflow: hidden; /* Hide any overflow from the image */
+  }
+  
+  
+#home {
+    padding: 20px;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+.col-md-6 {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+  
+.col-md-6 img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+.col-md-6 img:hover {
+    transform: scaleX(-1);
+  }
+  
+.col-md-6 h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+  }
+  /* Style for the button */
+.row button {
+    background-color: #ff1b6e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.row button:hover {
+    background-color: #075935;
+}
+
+#attractions {
+    padding: 20px;
+    text-align: center;
+}
+
+#attractions h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.attractions-block{
+    width: 100%;
+    height: auto;
+}
+.image-attractions {
+    display: flex;
+}
+
+.image-attractions img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin-right: 10px; /* Adjust spacing between images as needed */
+    padding: 1rem;
+    justify-content: center;
+}
+.scale-up-center{
+    animation:scale-up-center 1.5s; 
+} 
+@keyframes scale-up-center{
+    0%{
+        transform:scale(.5)
+    } 
+    100%{
+        transform:scale(1)
+    } 
+}
+
+.image-wrapper button {
+    background-color: #ff1b6e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.image-wrapper button:hover {
+    background-color: #075935;
+}
+.attractions-button{
+    justify-content: center;
+    margin: 1rem;
+
+} 
+ 
+
+#activities {
+    padding: 20px;
+    text-align: center;
+}
+
+#activities h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.activities-block{
+    width: 100%;
+    height: auto;
+}
+.activities button {
+    background-color: #ff1b6e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.activities button:hover {
+    background-color: #075935;
+}
+
+#accommodations {
+    padding: 20px;
+    text-align: center;
+}
+
+#accommodations h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.accommodations-block{
+    width: 100%;
+    height: auto;
+}
+
+#why-us {
+    padding: 20px;
+    text-align: center;
+}
+
+#why-us h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.why-us-block{
+    margin-top: 1rem;
+}
+.why-us-block p{
+    text-align: justify;
+    padding: 1rem;
+}
+.why-us-section{
+    display: flex;
+}
+.image-why-us {
+    display: flex;
+}
+
+.image-why-us img {
+    max-width: auto;
+    /* width: 100%; */
+    max-height: 200px;
+    height: 100%;
+    margin-right: 10px; /* Adjust spacing between images as needed */
+    padding: 1rem;
+    justify-content: center;
+}
+
+
+
+    /* Style the main sections */
+section {
+    padding: 20px;
+    margin: 20px;
+    /* border: 1px solid #ddd; */
+    background-color: #fff;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Style headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Style list items */
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Add more specific styles as needed for your content */
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .popup-content p{
+        font-size: x-small;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.accommodation{
+    background-color: rgba(245, 222, 179, 0.781);
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.accommodation h3{
+    margin-bottom: 1rem;
+}
+.content{
+    display: flex;
+}
+.content img{
+    width: 100%; 
+    max-width: 400px;
+    height: auto; 
+    object-fit: cover; 
+    margin-left: 20px;
+}
+.accommodation button{
+    margin-bottom: 1rem;
+}
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* #popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  } */
+  
+  .close-popup {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+
