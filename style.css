@@ -80,7 +80,7 @@
     border-bottom-left-radius: 2rem;
 }
 
-.search-container button {
+.search-container input[type="text"] {
     padding: 10px 20px;
     background-color: white;
     /* color: white; */
