@@ -71,7 +71,7 @@
     display: flex;
 }
 
-.search-container plan {
+.search-container input[type="text"]  {
     width: 100%;
     padding: 10px;
     border: none;
@@ -80,7 +80,7 @@
     border-bottom-left-radius: 2rem;
 }
 
-.search-container input[type="text"] {
+.search-container button {
     padding: 10px 20px;
     background-color: white;
     /* color: white; */
