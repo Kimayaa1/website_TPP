@@ -96,8 +96,8 @@
       <span class="sr-only">Next</span>
     </a>
     <div class="search-container">
-      <input type="text" placeholder="Plan your trip...">
-      <button type="submit"><span class="search-icon">&#128269;</span></button>
+      <button id = "plan"> Plan your Trip... </button>
+      <button id = "plan"><span class="search-icon">&#128269;</span></button>
     </div>
   </div>
   
@@ -358,6 +358,9 @@
       });
     </script>
     <script>
+      document.getElementById("plan").addEventListener("click", function() {
+          window.open("https://kimayaa1.github.io/plan_jaipur/", "_blank");
+      });
       document.getElementById("learn-more-about-jaipur").addEventListener("click", function() {
           window.open("https://kimayaa1.github.io/about_jaipur/", "_blank");
       });
