@@ -71,7 +71,7 @@
     display: flex;
 }
 
-.search-container input[type="text"] {
+.search-container plan {
     width: 100%;
     padding: 10px;
     border: none;
